@@ -67,7 +67,7 @@ CREATE  TABLE  "department"
 - 在maven中的常用命令(https://docs.liquibase.com/tools-integrations/maven/commands/home.html)
 
 ---
-#####其他链接：
+##### 其他链接：
 [Create formatted SQL changelogs](https://www.liquibase.org/blog/plain-sql)  
 [liquibase sql format](https://docs.liquibase.com/concepts/sql-format.html)  
 [maven generateChangeLog](https://docs.liquibase.com/tools-integrations/maven/commands/maven-generatechangelog.html)
