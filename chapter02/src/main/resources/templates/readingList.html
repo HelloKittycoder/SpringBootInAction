@@ -1,0 +1,45 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Reading List</title>
+        <link rel="stylesheet" th:href="@{/style.css}"/>
+    </head>
+    <body>
+        <h2>Your Reading List</h2>
+        <!-- 有关#、$的使用，参考链接：https://blog.csdn.net/qq_43228581/article/details/106221543 -->
+        <!-- 说明：这里lists指向的是一个工具类 -->
+        <!--<div>[[${#lists}]]</div>
+        <div>[[${books}]]</div>-->
+
+        <div th:unless="${#lists.isEmpty(books)}">
+            <dl th:each="book : ${books}">
+                <dt class="bookHeadline">
+                    <span th:text="${book.title}">Title</span> by
+                    <span th:text="${book.author}">Author</span>
+                    (ISBN: <span th:text="${book.isbn}">ISBN</span>)
+                </dt>
+                <dd class="bookDescription">
+                    <span th:if="${book.description}"
+                        th:text="${book.description}">Description</span>
+                    <span th:if="${book.description eq null}">
+                        No description available</span>
+                </dd>
+            </dl>
+        </div>
+        <div th:if="${#lists.isEmpty(books)}">
+            <p>You have no books in your book list</p>
+        </div>
+        <hr/>
+        <h3>Add a book</h3>
+        <form method="POST">
+            <label for="title">Title:</label>
+            <input id="title" type="text" name="title" size="50"/><br/>
+            <label for="author">Author:</label>
+            <input id="author" type="text" name="author" size="50"/><br/>
+            <label for="isbn">ISBN:</label>
+            <input id="isbn" type="text" name="isbn" size="15"/><br/>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" cols="80" rows="5"></textarea><br/>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>

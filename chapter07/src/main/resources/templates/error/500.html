@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Oops!</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+<!-- 参考链接：https://www.cnblogs.com/gdjlc/p/11703285.html -->
+<!--/*-->
+<div class="errorPage">
+    timestamp:[[${timestamp}]]<br/>
+    status:[[${status}]]<br/>
+    error:[[${error}]]<br/>
+    exception:[[${exception}]]<br/>
+    message:[[${message}]]<br/>
+    trace:[[${trace}]]<br/>
+    path:[[${path}]]
+</div>
+<!--*/-->
+<div class="errorPage">
+    <span class="oops">Oops!</span><br/>
+    <img th:src="@{/MissingPage.png}"/>
+    <p>There seems to be a problem with the page you requested
+    (<span th:text="${path}">/readingList</span>).</p>
+    <p th:text="${'Details: ' + message}"></p>
+</div>
+</body>
+</html>

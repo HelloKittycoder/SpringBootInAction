@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Reading List</title>
+        <link rel="stylesheet" th:href="@{/style.css}"/>
+    </head>
+    <body>
+        <!-- thymeleaf页面传参与字符串拼接：
+         https://blog.csdn.net/sun1021873926/article/details/61615219
+         https://www.cnblogs.com/white-knight/p/8796581.html
+         -->
+        <div th:if="${param.videoId}">
+            <video controls>
+                <source th:src="'/getVideo/' + ${param.videoId}" type="video/mp4"/>
+            </video>
+        </div>
+        <!-- 默认加载 -->
+        <div th:if="${param.videoId eq null}">
+            <video controls>
+                <source th:src="'/getVideo/aaa'" type="video/mp4"/>
+            </video>
+        </div>
+        <!--<video controls>
+            <source src="/getVideo/11" type="video/mp4"/>
+        </video>-->
+    </body>
+</html>
