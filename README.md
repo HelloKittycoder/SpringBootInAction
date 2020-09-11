@@ -6,6 +6,7 @@ chapter02_test1 测试@ConditionOnClass注解，根据条件筛选不同的配�
 chapter02_test2 测试@ConditionOnBean注解，根据条件筛选不同的配置  
 （注意@ConditionalOnXX是和@Configuration一起用的）  
 chapter02_test_mybatis_starter 补充：测试mybatis-starter中全局TypeHandler的使用  
+chapter02_test_mybatis_starter2 补充：测试spring+mybatis多数据源（添加多套配置）  
 - **第3章** [自定义配置]()  
 chapter03 书籍配套代码（涉及知识点：自定义错误页面及常用属性、外部属性注入、自定义security配置）  
 chapter03_test1 测试Profile的使用  
