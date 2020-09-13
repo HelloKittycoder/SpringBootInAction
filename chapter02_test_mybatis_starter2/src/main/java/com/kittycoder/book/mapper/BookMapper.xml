@@ -2,7 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kittycoder.book.mapper.BookMapper">
 
-    <select id="selectBookList" resultType="com.kittycoder.book.po.Book">
+    <resultMap id="bookResultMap" type="com.kittycoder.book.po.Book">
+        <id column="l_id" property="id"/>
+        <result column="vc_book_name" property="bookName"/>
+        <result column="vc_author" property="author"/>
+    </resultMap>
+
+    <select id="selectBookList" resultMap="bookResultMap">
         select * from t_book
     </select>
 
