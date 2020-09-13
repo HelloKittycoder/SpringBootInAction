@@ -61,7 +61,7 @@ public class StudentMapperTest extends BaseTest {
         bookMapper.insertBook(new Book(1, "三国演义", "罗贯中"));
         bookMapper.insertBook(new Book(2, "红楼梦", "曹雪芹"));
         List<Book> bookList = bookMapper.selectBookList();
-        System.out.println(studentList);
+        System.out.println(bookList);
         bookMapper.updateBook(new Book(1, "三国演义2", "罗贯中2"));
         bookList = bookMapper.selectBookList();
         System.out.println(bookList);
