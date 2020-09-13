@@ -8,6 +8,8 @@
     </appender>
 
     <logger name="org.springframework.jdbc.datasource.init" level="DEBUG" />
+    <!-- mybatis日志打印 -->
+    <logger name="com.kittycoder" level="DEBUG" />
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />
