@@ -32,8 +32,9 @@ public class BaseTest {
         runner.setAutoCommit(false);
         runner.setStopOnError(false);
 
-        runner.setLogWriter(null);
-        runner.setErrorLogWriter(null);
+        // 显示sql运行日志
+        // runner.setLogWriter(null);
+        // runner.setErrorLogWriter(null);
 
         runner.runScript(reader);
         conn.commit();

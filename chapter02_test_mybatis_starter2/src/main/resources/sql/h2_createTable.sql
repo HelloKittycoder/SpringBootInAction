@@ -5,4 +5,5 @@ create table if not exists student(
     sbirthday varchar(50)
 );
 
-truncate student;
+-- h2语法需要加table关键字
+truncate table student;
