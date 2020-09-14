@@ -8,8 +8,11 @@
     </appender>
 
     <logger name="org.springframework.jdbc.datasource.init" level="DEBUG" />
-    <!-- spring-jdbc日志打印 -->
-    <logger name="org.springframework.jdbc.core.JdbcTemplate" level="DEBUG" />
+    <!-- spring-jdbc日志打印
+    打印sql参数：https://www.cnblogs.com/liangweiping/p/9767058.html
+    -->
+    <logger name="org.springframework.jdbc.core" level="DEBUG" />
+    <logger name="org.springframework.jdbc.core.StatementCreatorUtils" level="TRACE"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />
