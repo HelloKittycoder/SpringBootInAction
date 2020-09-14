@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %green(%-5level)[%thread] %cyan(%-40.40C) \(L:%L\) - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework.jdbc.datasource.init" level="DEBUG" />
+    <!-- mybatis日志打印 -->
+    <logger name="com.kittycoder" level="DEBUG" />
+    <!-- spring-jdbc日志打印
+    打印sql参数：https://www.cnblogs.com/liangweiping/p/9767058.html
+    -->
+    <logger name="org.springframework.jdbc.core" level="DEBUG" />
+    <logger name="org.springframework.jdbc.core.StatementCreatorUtils" level="TRACE"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

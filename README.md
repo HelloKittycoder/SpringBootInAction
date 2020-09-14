@@ -9,6 +9,7 @@ chapter02_test_mybatis_starter 补充：测试mybatis-starter中全局TypeHandle
 chapter02_test_mybatis_starter2 补充：测试spring+mybatis多数据源（添加多套配置）  
 chapter02_test_mybatis_starter3 补充：测试spring+mybatis多数据源（AOP）  
 chapter02_test_springjdbc_starter 补充：测试spring-jdbc多数据源  
+chapter02_test_springjdbc_mybatis_starter 补充：测试spring-jdbc、mybatis多数据源  
 - **第3章** [自定义配置]()  
 chapter03 书籍配套代码（涉及知识点：自定义错误页面及常用属性、外部属性注入、自定义security配置）  
 chapter03_test1 测试Profile的使用  
