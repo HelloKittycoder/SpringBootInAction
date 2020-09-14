@@ -51,4 +51,14 @@ public class Student {
     public void setSbirthday(String sbirthday) {
         this.sbirthday = sbirthday;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "sid=" + sid +
+                ", sname='" + sname + '\'' +
+                ", sage=" + sage +
+                ", sbirthday='" + sbirthday + '\'' +
+                '}';
+    }
 }
