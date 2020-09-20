@@ -31,6 +31,7 @@
     <module>chapter03</module>
     <module>chapter03_test1</module>
     <module>chapter03_test2</module>
+    <module>chapter03_test_custom_bean_scan</module>
     <module>chapter04</module>
     <module>chapter04_1</module>
     <module>chapter07</module>

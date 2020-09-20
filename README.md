@@ -14,6 +14,8 @@ chapter02_test_springjdbc_mybatis_starter 补充：测试spring-jdbc、mybatis�
 chapter03 书籍配套代码（涉及知识点：自定义错误页面及常用属性、外部属性注入、自定义security配置）  
 chapter03_test1 测试Profile的使用  
 chapter03_test2 测试自定义错误属性的使用  
+chapter03_test_custom_bean_scan 补充：自定义bean扫描（模拟mybatis在项目启动时给Mapper接口添加动态代理，然后把代理的接口加到spring容器中）  
+主要用到了ImportBeanDefinitionRegistrar来导入bean，另外重写了ClassPathBeanDefinitionScanner的bean扫描逻辑  
 - **第4章** [测试]()  
 chapter04 对未添加安全验证的应用进行测试  
 ReadingListRepositoryTest 测试数据库访问层  
